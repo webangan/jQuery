@@ -3,10 +3,56 @@
 		<title>
 				Attribute Selectors 
 		</title>
+		<script src="../jquery-3.1.1.min.js"></script>
+<style>
+	
+	div{ border:1px solid #f00; margin:5px;   }
+	
+	p{ border:1px solid green; margin:5px; }
+
+</style>		
 	</head>
 	<body>
 
+<div>this is outer div 1
+	<div title="">this is inner 1 div</div>
+	<p>this is inner p1</p>
+	<div>this is inner 2 div</div>
+	<p>this is inner p1</p>
+	<div title="abc">this is inner 3 div</div>
+	<p>this is inner p1</p>
+	<div>this is inner 4 div</div>
+	<div>this is inner 5 div</div>
+</div>
 
+<div>this is outer div 2</div>
+<p title="xyz">this is outer p1</p>
+<div>this is outer div 3</div>
+<p>this is outer p2</p>
+<div title="abc">this is outer div 4</div>
+
+<hr />
+<table border="2" cellpadding="5">
+	<tr>
+		<td> Has Attribute Selector [name] <br /> $("[title]").css("background","#f00")	</td>
+		<td> Selects elements that have the specified attribute, with any value. </td>
+	</tr>
+
+	<tr>
+		<td> Attribute Equals Selector [name=”value”] <br /> $("[title='abc']").css("background","#f00"); 	</td>
+		<td> Selects elements that have the specified attribute with a value exactly equal to a certain value. </td>
+	</tr>
+</table>
+
+<script>
+	
+// $("[title]").css("background","#f00"); 	
+
+// $("[title='abc']").css("background","#f00"); 	
+
+
+
+</script>
 
 		
 	</body>
