@@ -1,0 +1,134 @@
+<html>
+	<head>
+		<title>
+				Attribute Selectors 
+		</title>
+		<script src="../jquery-3.1.1.min.js"></script>
+<style>
+	
+	div{ border:1px solid #f00; margin:5px;   }
+	
+	p{ border:1px solid green; margin:5px; }
+
+</style>		
+	</head>
+	<body>
+
+<div>this is outer div 1
+	<div title="">this is inner 1 div
+			<p> this is paragraph</p>
+			<span> this is span</span>
+	</div>
+	<p title="here is abc">this is inner p1</p>
+	<div title="abc is here" align="test">this is inner 2 div</div>
+	<p title="here is dabc">this is inner p1</p>
+	<div title="abc">this is inner 3 div</div>
+	<p title="abc-uk">this is inner p1</p>
+	<div title="abcdis not here">this is inner 4 div</div>
+	<div title="here is aabcc and d">this is inner 5 div</div>
+</div>
+
+<div id="abc">this is outer div 2</div>
+<p title="xyz">this is outer p1</p>
+<div class="abc">this is outer div 3
+
+<p title="here is abc">this is inner p1</p>
+
+
+</div>
+<p class="abc">this is outer p2</p>
+<div title="abc">this is outer div 4</div>
+
+<hr />
+<table border="2" cellpadding="5">
+
+	<tr>
+		<td> :first-child Selector <br /> $(":first-child").css("background","#f00");	</td>
+		<td> Selects all elements that are the first child of their parent. </td>
+	</tr>
+
+	<tr>
+		<td> :last-child Selector <br /> $(":last-child").css("background","#f00") </td>
+		<td> Selects all elements that are the last child of their parent. </td>
+	</tr>
+
+	<tr>
+		<td> :nth-child() Selector <br />  $(":nth-child(3)").css("background","#f00"); <br /> jQuery( ":nth-child(index/even/odd/equation)" ) 	</td>
+		<td> Selects all elements that are the nth-child of their parent start at 1 </td>
+	</tr>
+
+	<tr>
+		<td> :nth-last-child() Selector <br /> $(":nth-last-child(3)").css("background","#f00"); <br />  jQuery( ":nth-last-child(index/even/odd/equation)" )  	 	</td>
+		<td> Selects all elements that are the nth-child of their parent, counting from the last element to the first. </td>
+	</tr>
+
+	<tr>
+		<td> :first-of-type Selector <br /> $("div:first-of-type").css("background","#f00");  	</td>
+		<td> Selects all elements that are the first among siblings of the same element name. </td>
+	</tr>
+
+	<tr>
+		<td> :last-of-type Selector <br /> $("div:last-of-type").css("background","#f00");  	</td>
+		<td> Selects all elements that are the last among siblings of the same element name. </td>
+	</tr>	
+
+	<tr>
+		<td> nth-of-type() Selector <br />  $(":nth-of-type(2)").css("background","#f00"); <br />  jQuery( ":nth-of-type(index/even/odd/equation)" )	</td>
+		<td>  Selects all elements that are the nth child of their parent in relation to siblings with the same element name. </td>
+	</tr>
+
+	<tr>
+		<td> nth-last-of-type() Selector <br /> jQuery( ":nth-last-of-type(index/even/odd/equation)" ) <br/>  	</td>
+		<td> Selects all the elements that are the nth-child of their parent in relation to siblings with the same element name, counting from the last element to the first. </td>
+	</tr>		
+
+
+	<tr>
+		<td> :only-child Selector <br /> $(":only-child").css("background","#f00");  	</td>
+		<td> Selects all elements that are the only child of their parent. </td>
+	</tr>
+
+
+	<tr>
+		<td> :first-of-type Selector <br /> $("p:only-of-type").css("background","#f00");  	</td>
+		<td> Selects all elements that have no siblings with the same element name. </td>
+	</tr>
+
+
+	<tr>
+		<td> 	<br />  	</td>
+		<td>  </td>
+	</tr>		
+
+</table>
+
+<script>
+	
+
+// $(":first-child").css("background","#f00"); 	
+
+// $(":last-child").css("background","#f00"); 	
+
+// $(":nth-child(3)").css("background","#f00"); 	
+
+// $(":nth-last-child(3)").css("background","#f00"); 	
+
+// $("div:first-of-type").css("background","#f00"); 	
+
+// $(":last-of-type").css("background","#f00"); 
+
+// $(":nth-of-type(2)").css("background","#f00"); 
+
+//$(":nth-last-of-type(2)").css("background","#f00"); 
+
+// $(":only-child").css("background","#f00"); 
+
+// $("p:only-of-type").css("background","#f00"); 
+
+
+
+</script>
+
+		
+	</body>
+</html>
