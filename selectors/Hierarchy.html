@@ -1,0 +1,97 @@
+<html>
+	<head>
+		<title>
+				Attribute Selectors 
+		</title>
+		<script src="../jquery-3.1.1.min.js"></script>
+<style>
+	
+	div{ border:1px solid #f00; margin:5px;   }
+	
+	p{ border:1px solid green; margin:5px; }
+
+</style>		
+	</head>
+	<body>
+
+<div>this is outer div 1
+	<div title="">this is inner 1 div
+			<p class="abc"> this is paragraph</p>
+			<span> this is span
+					<strong class="abc"> this is abc strong</strong>
+			</span>
+
+	</div>
+	<p title="here is abc">this is inner p1</p>
+	<div title="abc is here" align="test">this is inner 2 div</div>
+	<p title="here is dabc">this is inner p1</p>
+	<div title="abc">this is inner 3 div</div>
+	<p title="abc-uk">this is inner p1</p>
+	<div title="abcdis not here">this is inner 4 div</div>
+	<div title="here is aabcc and d">this is inner 5 div</div>
+</div>
+
+<div id="abc">this is outer div 2</div>
+<p title="xyz">this is outer p1</p>
+<div class="abc">this is outer div 3
+
+<p title="here is abc">this is inner p1</p>
+
+
+</div>
+<p class="abc">this is outer p2</p>
+<div title="abc">this is outer div 4</div>
+<div title="abc">this is outer div 4</div>
+
+<hr />
+<table border="2" cellpadding="5">
+
+	<tr>
+		<td> Child Selector (“parent > child”) <br /> $("div > .abc").css("background","#f00"); 	</td>
+		<td> selects all direct child elements specified by "child" of elements specified by "parent". </td>
+	</tr>
+
+	<tr>
+		<td> Descendant Selector (“ancestor descendant”)  <br /> $("div  .abc").css("background","#f00"); 	</td>
+		<td> Selects all elements that are descendants of a given ancestor. </td>
+	</tr>
+
+
+	<tr>
+		<td> Next Adjacent Selector (“prev + next”)  <br /> $(".abc + div").css("background","#f00");  	</td>
+		<td> Selects all next elements matching "next" that are immediately preceded by a sibling "prev" </td>
+	</tr>
+
+
+	<tr>
+		<td> Next Siblings Selector (“prev ~ siblings”) <br /> $(".abc ~ div").css("background","#f00"); 	</td>
+		<td> Selects all sibling elements that follow after the "prev" element, have the same parent, and match the filtering "siblings" selector. </td>
+	</tr>		
+	
+
+
+	<tr>
+		<td> 	<br />  	</td>
+		<td>  </td>
+	</tr>		
+
+</table>
+
+<script>
+	
+
+// $("div  .abc").css("background","#f00"); 
+
+// $("div  .abc").css("background","#f00"); 
+
+// $(".abc + div").css("background","#f00"); 
+
+// $(".abc ~ div").css("background","#f00"); 
+
+
+
+</script>
+
+		
+	</body>
+</html>
