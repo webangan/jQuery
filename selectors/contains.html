@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<title>
+				Attribute Selectors 
+		</title>
+		<script src="../jquery-3.1.1.min.js"></script>
+<style>
+	
+	div{ border:1px solid #f00; margin:5px; min-height:10px;   }
+	
+	p{ border:1px solid green; margin:5px; }
+
+</style>		
+	</head>
+	<body>
+
+<div>this is outer div 1
+	<div title="">this is inner 1 div
+			<p class="abc"> this is paragraph</p>
+			<span> this is span
+					<strong class="abc"> this is abc strong</strong>
+			</span>
+
+	</div>
+	<p title="here is abc">this is inner p1</p>
+	<div title="abc is here" align="test">this is inner 2 div</div>
+	<p title="here is dabc">this is inner p1</p>
+	<div title="abc">this is inner 3 div</div>
+	<p title="abc-uk">this is inner p1</p>
+	<div title="abcdis not here">this is inner 4 div</div>
+	<div title="here is aabcc and d">this is inner 5 div</div>
+</div>
+
+<div id="abc">this is outer div 2</div>
+<p title="xyz">this is outer p1</p>
+<div class="abc">this is outer div 3
+
+<p title="here is abc">this is inner p1</p>
+
+
+</div>
+<p class="abc">this is outer p2</p>
+<div title="abc">this is outer div 4</div>
+<div title="abc">this is outer div 4</div>
+
+<hr />
+<table border="2" cellpadding="5">
+
+	<tr>
+		<td> :contains() Selector <br /> $("div:contains('outer')").css("background","#f00"); </td>
+		<td> Select all elements that contain the specified text. </td>
+	</tr>
+
+	<tr>
+		<td> :empty Selector <br /> $( "td:empty" ).text( "Was empty!" );	</td>
+		<td> Select all elements that have no children (including text nodes). </td>
+	</tr>
+
+	<tr>
+		<td> :has() Selector <br /> $( "div:has(p)" ).css("background","#f00"); 	</td>
+		<td> Selects elements which contain at least one element that matches the specified selector. </td>
+	</tr>
+
+	<tr>
+		<td> :parent Selector <br /> $("div:parent").css("background","#f00"); 	</td>
+		<td> Select all elements that have at least one child node (either an element or text). </td>
+	</tr>
+
+	
+
+
+	<tr>
+		<td> 	<br />  	</td>
+		<td></td>
+	</tr>		
+
+</table>
+
+<div> fds </div>
+
+<script>
+	
+
+// $("div:contains('outer')").css("background","#f00"); 
+
+// $( "td:empty" ).text( "Was empty!" )
+
+// $( "div:has(p)" ).css("background","#f00"); 
+
+// $("div:parent").css("background","#f00"); 
+
+
+
+</script>
+
+		
+	</body>
+</html>
