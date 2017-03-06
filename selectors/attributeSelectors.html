@@ -16,13 +16,13 @@
 
 <div>this is outer div 1
 	<div title="">this is inner 1 div</div>
-	<p>this is inner p1</p>
-	<div>this is inner 2 div</div>
-	<p>this is inner p1</p>
+	<p title="here is abc">this is inner p1</p>
+	<div title="abc is here" align="test">this is inner 2 div</div>
+	<p title="here is dabc">this is inner p1</p>
 	<div title="abc">this is inner 3 div</div>
-	<p>this is inner p1</p>
-	<div>this is inner 4 div</div>
-	<div>this is inner 5 div</div>
+	<p title="abc-uk">this is inner p1</p>
+	<div title="abcdis not here">this is inner 4 div</div>
+	<div title="here is aabcc and d">this is inner 5 div</div>
 </div>
 
 <div>this is outer div 2</div>
@@ -42,13 +42,72 @@
 		<td> Attribute Equals Selector [name=”value”] <br /> $("[title='abc']").css("background","#f00"); 	</td>
 		<td> Selects elements that have the specified attribute with a value exactly equal to a certain value. </td>
 	</tr>
+
+	<tr>
+		<td> Attribute Not Equal Selector [name!=”value”]<br />  $("[title!='abc']").css("background","#f00"); 	</td>
+		<td> Select elements that either don't have the specified attribute, or do have the specified attribute but not with a certain value. </td>
+	</tr>
+
+<tr>
+		<td> Multiple Attribute Selector [name=”value”][name2=”value2″] 	<br /> $("[title*='abc'][align]").css("background","#f00")  	</td>
+		<td> Matches elements that match all of the specified attribute filters ( As Many As attribute filter you can add  )  </td>
+</tr>
+
+	<tr>
+		<td> Attribute Contains Selector [name*=”value”] 	<br />  $("[title*='abc']").css("background","#f00"); 	</td>
+		<td> Selects elements that have the specified attribute with a value containing a given substring  </td>
+	</tr>
+
+	
+
+	<tr>
+		<td> Attribute Ends With Selector [name$=”value”] 	<br />  $("[title$='abc']").css("background","#f00"); 	 	</td>
+		<td> elects elements that have the specified attribute with a value ending exactly with a given string. The comparison is case sensitive.  </td>
+	</tr>
+
+	<tr>
+		<td> Attribute Starts With Selector [name^=”value”] 	<br />  $("[title^='abc']").css("background","#f00"); 	</td>
+		<td> Selects elements that have the specified attribute with a value beginning exactly with a given string.  </td>
+	</tr>
+
+	<tr>
+		<td> Attribute Contains Word Selector [name~=”value”] 	<br /> $("[title~='abc']").css("background","#f00");  	</td>
+		<td> Selects elements that have the specified attribute with a value containing a given word, delimited by spaces.  </td>
+	</tr>
+
+	<tr>
+		<td> Attribute Contains Prefix Selector [name|=”value”] 	<br />  $("[title|='abc']").css("background","#f00"); 	</td>
+		<td> Selects elements that have the specified attribute with a value either equal to a given string or starting with that string followed by a hyphen (-).  </td>
+	</tr>
+
+	<tr>
+		<td> 	<br />  	</td>
+		<td>  </td>
+	</tr>		
+
 </table>
 
 <script>
 	
 // $("[title]").css("background","#f00"); 	
 
-// $("[title='abc']").css("background","#f00"); 	
+// $("[title='abc']").css("background","#f00"); 
+
+// $("[title!='abc']").css("background","#f00"); 	
+
+// $("[title*='abc'][align]").css("background","#f00")
+
+// $("[title*='abc']").css("background","#f00"); 
+
+// $("[title$='abc']").css("background","#f00"); 	
+
+// $("[title^='abc']").css("background","#f00");
+
+// $("[title~='abc']").css("background","#f00");
+
+// $("[title|='abc']").css("background","#f00");
+
+
 
 
 
